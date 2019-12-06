@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/',methods = ['GET','POST'])
 def Transport_GUI():
-    title= "Fenómenos de Trasnporte"
+    title= "Fenomenos de Trasnporte"
     informacion = forms.TransportPhenomena(request.form)
 
     if request.method == 'POST' and informacion.validate(): #Validacion para el envio de datos
