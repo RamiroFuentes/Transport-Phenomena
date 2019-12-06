@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+       <!--jquery y cdn-->
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <title>{% block title %} {% endblock %}</title>
+</head>
+
+<!--Navbar del controlador-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Control</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Opciones de Procesamiento
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/singlevalue">Single Value</a>
+            <a class="dropdown-item" href="/intervalvalue">Interval Value</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<body class="" style="background: #141E30;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+    {% block content%}
+    {% endblock%}
+    
+  <!--FOOTER-->
+    <div>
+
+      
+        <div class='bg-white' style="text-align: center; margin: auto;">
+            <div class="bg-whitet"
+                style="width:250px; height:150px; display: inline-block;  margin: 20px; text-align: left;">
+                <h1>Smart <br> Sources</h1>
+            </div>
+            <div class="bg-white"
+                style="width:250px; height:150px; display: inline-block;  margin: 20px; text-align: left;">
+                <p><b>Contacto</b></p>
+                <p class="text-secondary">Noria Alta Guanajuato. <br>
+                    Guanajuato,Guanajuato. México. <br>
+                    Email: fl.joseramiro@outlook.com <br>
+                    Telefono: (464) 157 0304</p>
+            </div>
+            <div class="bg-white text-left"
+                style="width:250px; height:150px; display: inline-block;  margin: 20px; color: grey;">
+                <p style="color: black;"><b>Redes sociales</b></p>
+                <a href="https://www.facebook.com/joseramiro.fuentes.9"
+                    style="color: grey; text-decoration: none;">Facebook</a> <br>
+                <a href="https://twitter.com/RamiroFuentesL" style="color: grey; text-decoration: none;">Twitter</a>
+                <br>
+                <a href="https://mx.linkedin.com/" style="color: grey; text-decoration: none;">Linkedin</a> <br>
+                <a href="https://www.instagram.com/iamramirofl/?hl=es-la"
+                    style="color: grey; text-decoration: none;">Instagram</a> <br>
+            </div>
+        </div>
+
+    </div>
+
+ </body>
+
+</html>

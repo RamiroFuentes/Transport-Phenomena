@@ -1,0 +1,79 @@
+{% extends 'base.html'%}
+{% block title %} {{title}} {% endblock %}
+
+{% block content%}
+<!--Aquí va el jumbotron de instrucciones-->
+  <div class="jumbotron jumbotron-fluid" style="padding: 5%;">
+    <h1 class="display-4">Instructivo de aplicación</h1>
+    <p class="lead">Aquí se indican claramente las instrucciones para el uso del controlador.</p>
+    <hr class="my-4">
+    <p>Comentar acerca de descargar un pdf a la hora de hacer click en el boton.</p>
+    <a class="btn btn-danger btn-lg readon" href="../static/assets/SoftSkills.pdf" role="button" target="_blank">Ver PDF</a>
+  </div>
+
+{% from "_macro.html" import render_field %}
+<div style="text-align: center;">
+
+<!--Formulario-->
+<div style="">
+ <div class="bg-light text-dark shadow-lg"
+    style="width: 50%; padding: 3%; border-radius: 15px; margin-left:auto; margin-right: auto; border-color:blue; margin-top:5%; margin-bottom: 5%;">
+    <h1 class="text-dark">Sistema de control</h1>
+    <!--Aquí-->
+    <form method="POST">
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label text-left">W Líquido:</label>
+            <div class="col-sm-10">
+                {{ render_field(form.W_Liquido, class="form-control") }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">W Solido:</label>
+            <div class="col-sm-10">
+                {{ render_field(form.W_Solido,class="form-control") }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">G.E.:</label>
+            <div class="col-sm-10">
+                {{ render_field(form.GE, class="form-control") }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-10 mx-auto">
+                <!--Boton de subida de datos-->
+                <button type="submit" class="btn btn-danger mx-auto">Enviar datos</button>
+            </div>
+        </div>
+    </form>
+</div>   
+</div>
+
+
+
+<!--Tabla de Valores-->
+<div style="">
+  <div style="text-align: center;">
+    {%if inf == True%}
+
+
+    
+    <div class="row" style="margin-bottom: 5%; ">
+        <!--Tarjeta de Contenedor-->
+        <div class="card bg-light shadow-lg" style="border-radius:15px; margin:auto; margin-top:0px;width: 350px;">
+            <h4 style="margin-top: 5%;">Resultados:</h1>
+                <h4>Cv = {{Cv}}</h4>
+                <h4>Mu = {{Mup_Mu}}</h4>
+                <br>
+                <br>
+        </div>
+    </div>
+{% endif %}
+</div>  
+</div>
+
+</div>
+
+
+
+{% endblock %}

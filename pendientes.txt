@@ -1,0 +1,15 @@
+Cosas pendientes por hacer:
+
+- Cambiar la dinámica de como se realiza la operacion.
+    Tengo que hacer que solo me pida valores singulares e imprima solo una sugerencia del kc y Ti 
+    sugiero plantear una nueva funcion o hacerlo solo para un solo elemento 
+
+- Diseñar otro esquema 
+    En el cual el usuario pueda ingresar el rango de n y el rango del factor de amortiguamiento y 
+    que genere las tablas correspondientes, (Creo que para este modelo aplica el uso del sistema que
+    ya tengo en el programa)
+
+*** Como recomendación creo que debería dejar el archivo original tal como está y agregar los diferentes
+    métodos en pestañas aparte. ***
+
+- Anexar el documento pdf que me mandará el profesor escoto
